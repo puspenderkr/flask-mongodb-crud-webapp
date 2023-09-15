@@ -49,7 +49,7 @@ To stop the running containers and remove them, press `Ctrl+C` in the terminal w
 
 ```bash
 docker-compose down
-
+```
 
 
 
