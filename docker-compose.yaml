@@ -1,0 +1,17 @@
+version: '3'
+services:
+  flask-app:
+    build:
+      context: .
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      MONGO_URI: "mongodb://mongo:27017/student_database"
+
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+      - "27017:27017"

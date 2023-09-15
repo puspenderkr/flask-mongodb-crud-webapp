@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% include 'header.html' %}
+ 
+{% block title %} Delete Student {% endblock %}
+ 
+{% block body %}
+<div class="container">
+    <form action="{{ url_for('delete', id=student._id) }}" method="post">
+        <p>Click YES to confirm</p>
+        <input type="submit" value="YES" class="btn btn-danger">
+        <a href='/' class="btn btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}
