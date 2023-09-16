@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, redirect, flash
 from models import student_model
+import os
+
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
+
+MONGO_URI = os.environ.get("MONGO_URI", "mongodb://mongo:27017/student_database")
+app.config["MONGO_URI"] = MONGO_URI
 
 
 @app.route("/create", methods=["GET", "POST"])

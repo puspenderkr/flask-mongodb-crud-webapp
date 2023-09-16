@@ -29,74 +29,7 @@
         <td>Password</td>
         <td><input type = "password" name = "password" class="form-control" value="{{student.password}}" /></td>
     </tr>
-
-    <tr>
-        <td>Gender</td>
-        <td>
-          Male: <input type = "radio" name = "gender"  value="male"
-          {% if  student.gender=='male'  %}
-             checked
-          {% endif  %}
-          />
-         Female: <input type = "radio" name = "gender"  value="female"
-         {% if  student.gender=='female'  %}
-         checked
-      {% endif  %}
-         />
-        </td>
-    </tr>
-
-    <tr>
-        <td>Hobbies</td>
-        <td>
-
-            Cricket : <input type="checkbox" name="hobbies"  value="cricket" 
-            {% if 'cricket' in student.hobbies %}
-               checked
-            {% endif %}
-            >
-            Movies : <input type="checkbox"  name="hobbies"  value="movies"
-            {% if 'movies' in student.hobbies %}
-                checked
-            {% endif %}
-            
-            >
-            TV : <input type="checkbox"  name="hobbies"  value="tv"
-            {% if 'tv' in student.hobbies %}
-               checked
-            {% endif %}
-            >
-           
-        </td>
-    </tr>
-
-
-
-    <tr>
-        <td>Country</td>
-        <td>
-        <select name="country" class="form-control">
-            <option value="india"
-            {% if 'india' in student.country %}
-            selected
-           {% endif %}
-            >India</option>
-            <option value="usa"
-            {% if 'usa' in student.country %}
-              selected
-           {% endif %}
-            >USA</option>
-            <option value="australia"
-            
-            {% if 'australia' in student.country %}
-            selected
-          {% endif %}
-            >Australia</option>
-         </select>
-        </td>
-    </tr>
     
-
     <tr>
         <td colspan="2">
             <input type="submit" name="submit" value="submit" class="btn btn-warning">
